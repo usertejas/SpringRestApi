@@ -27,7 +27,7 @@ public class restController {
 	public personDTO withparameter(@PathVariable("name") String name,@PathVariable("school") String school ){
 		personDTO person = new personDTO(name, school);
 		System.out.println(person);
-		System.out.println("returning object");
+		System.out.println("returning object gh");
 		return person;
 	}
 
