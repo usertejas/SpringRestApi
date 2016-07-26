@@ -32,7 +32,7 @@ public class restController {
 		return person;
 	}
 	
-	@RequestMapping(value = "/Calculator/{num1}/{num2}", method = RequestMethod.POST, produces = "application/json")
+	@RequestMapping(value = "/Calculator/add/{num1}/{num2}", method = RequestMethod.POST, produces = "application/json")
 	@ResponseBody
 	public Integer Add(@PathVariable("num1") int num1,@PathVariable("num2") int num2 ){
 		Calculator cal = new Calculator();
@@ -41,5 +41,13 @@ public class restController {
 		return cal.add(num1, num2);
 	}
 	
+	@RequestMapping(value = "/Calculator/sub/{num1}/{num2}", method = RequestMethod.POST, produces = "application/json")
+	@ResponseBody
+	public Integer sub(@PathVariable("num1") int num1,@PathVariable("num2") int num2 ){
+		Calculator cal = new Calculator();
+		
+	 
+		return cal.sub(num1, num2);
+	}
 
 }
